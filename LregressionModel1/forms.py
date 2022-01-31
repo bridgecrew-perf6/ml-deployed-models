@@ -4,51 +4,66 @@ from django.forms import fields
 
 class newForm(forms.Form):
 
-    GREScore = forms.FloatField(
-        max_value=340,
+    CRIM = forms.FloatField(
 
-        label='GREScore',
+
+        label='CRIM',
         widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'GREScore', 'id': 'form-GREScore'}),
+            attrs={'class': 'form-control mb-3', 'placeholder': 'CRIM', 'id': 'form-CRIM'}),
 
 
     )
 
-    TofelScore = forms.FloatField(
+    INDUS = forms.FloatField(
 
-        label='TofelScore', widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'TofelScore', 'id': 'form-TofelScore'}))
+        label='INDUS', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'INDUS', 'id': 'form-INDUS'}))
 
-    uniRating = forms.FloatField(
-        min_value=0.0,
-        max_value=5.0,
-        label='uniRating', widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'uni Rating', 'id': 'form-uniRating'}))
+    CHAS = forms.FloatField(
 
-    SopScore = forms.FloatField(
-        min_value=0,
-        max_value=5,
-        label='SopScore', widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'SopScore', 'id': 'form-SopScore'}))
+        label='CHAS', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'CHAS', 'id': 'form-CHAS'}))
 
-    LORScore = forms.FloatField(
-        min_value=1,
-        max_value=5,
-        label='LORScore', widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'LORScore', 'id': 'form-LORScore'}))
+    NOX = forms.FloatField(
 
-    CGPA = forms.FloatField(
-        min_value=0,
-        max_value=10,
-        label='CGPA', widget=forms.TextInput(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'CGPA', 'id': 'form-CGPA'}))
+        label='NOX', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'NOX', 'id': 'form-NOX'}))
 
-    choices = (
-        (1, 'yes'),
-        (0, 'no')
-    )
-    Research = forms.ChoiceField(choices=choices, widget=forms.Select(
-        attrs={'class': 'form-control mb-3', 'id': 'form_research'}))
+    RM = forms.FloatField(
+
+        label='RM', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'RM', 'id': 'form-RM'}))
+
+    AGE = forms.FloatField(
+
+        label='AGE', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'AGE', 'id': 'form-AGE'}))
+    DIS = forms.FloatField(
+        label='DIS', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'DIS', 'id': 'form-DIS'}))
+
+    RAD = forms.FloatField(
+        label='RAD', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'RAD', 'id': 'form-RAD'}))
+    TAX = forms.FloatField(
+        label='TAX', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'TAX', 'id': 'form-TAX'}))
+    PTRATIO = forms.FloatField(
+        label='PTRATIO', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'PTRATIO', 'id': 'form-PTRATIO'}))
+    B = forms.FloatField(
+        label='B', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'B', 'id': 'form-B'}))
+    LSTAT = forms.FloatField(
+        label='LSTAT', widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'LSTAT', 'id': 'form-LSTAT'}))
+
+    # choices = (
+    #     (1, 'yes'),
+    #     (0, 'no')
+    # )
+    # Research = forms.ChoiceField(choices=choices, widget=forms.Select(
+    #     attrs={'class': 'form-control mb-3', 'id': 'form_research'}))
 
     class Meta:
         fields = {'GREScore'}
