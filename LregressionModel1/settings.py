@@ -25,7 +25,7 @@ SECRET_KEY = 'xlj=#z&(tk=r(2uic*@n=fq2%hy#j)q96fiywa=0sc8wr-!$e4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['admprediction.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['bostonassignmnt.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
