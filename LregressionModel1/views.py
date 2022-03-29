@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from .forms import newForm
 from django.template.defaulttags import register
 import pickle
-from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.preprocessing import StandardScaler, LabelEncoder, MinMaxScaler
 
 
 def home(request):
