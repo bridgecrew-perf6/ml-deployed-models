@@ -28,65 +28,53 @@ type="text/css"
             <form action="{% url 'predict' %}" class="row gy-2 gx-3 align-items-center" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="col">
-                    {% if form.CRIM.errors %}
-                        {{form.CRIM.errors}}
-                    {% endif %}
-                    {{form.CRIM}}
-
-                    {% if form.INDUS.errors %}
-                        {{form.INDUS.errors}}
-                    {% endif %}
-                    {{form.INDUS}}
-                    
-                    {% if form.CHAS.errors %}
-                        {{form.CHAS.errors}}
-                    {% endif %}
-                    {{form.CHAS}}
-
-                    {% if form.NOX.errors %}
-                        {{form.NOX.errors}}
-                    {% endif %}
-                    {{form.NOX}}
-
-                    {% if form.RM.errors %}
-                        {{form.RM.errors}}
-                    {% endif %}
-                    {{form.RM}}
-
                     {% if form.AGE.errors %}
                         {{form.AGE.errors}}
                     {% endif %}
-                    {{form.AGE}}
+                        {{form.AGE}}
+
+
+
+                    {% if form.TSH.errors %}
+                        {{form.TSH.errors}}
+                    {% endif %}
+                        {{form.TSH}}
+
+                    {% if form.T3.errors %}
+                        {{form.T3.errors}}
+                    {% endif %}
+                    {{form.T3}}
+                    
+                    
+                    {% if form.SEX.errors %}
+                        {{form.SEX.errors}}
+                    {% endif %}
+                    {{form.SEX}}
+
+                   
                   </div>
                 <div class="col">
-                    {% if form.DIS.errors %}
-                        {{form.DIS.errors}}
+                    {% if form.TT4.errors %}
+                    {{form.TT4.errors}}
                     {% endif %}
-                    {{form.DIS}}
+                    {{form.TT4}}
 
-                    {% if form.RAD.errors %}
-                        {{form.RAD.errors}}
+                    {% if form.T4U.errors %}
+                        {{form.T4U.errors}}
                     {% endif %}
-                    {{form.RAD}}
+                        {{form.T4U}}
 
-                    {% if form.TAX.errors %}
-                        {{form.TAX.errors}}
+                    {% if form.FTI.errors %}
+                        {{form.FTI.errors}}
                     {% endif %}
-                    {{form.TAX}}
+                        {{form.FTI}}
+                   
+                    {% if form.SURGERY.errors %}
+                        {{form.SURGERY.errors}}
+                    {% endif %}
+                    {{form.SURGERY}}
 
-                    {% if form.PTRATIO.errors %}
-                        {{form.PTRATIO.errors}}
-                    {% endif %}
-                    {{form.PTRATIO}}
-
-                    {% if form.B.errors %}
-                        {{form.B.errors}}
-                    {% endif %}
-                    {{form.B}}
-                    {% if form.LSTAT.errors %}
-                        {{form.LSTAT.errors}}
-                    {% endif %}
-                    {{form.LSTAT}}
+                  
                 </div>
                
                
@@ -95,8 +83,9 @@ type="text/css"
                     <button class="btn btn-primary btn-block py-2 mb-4 mt-5 font-weight-bold" type="submit"
                     value="Save changes">Predict</button>
                 </form>
-                {% if prediction %}
-                <h1>Price : {{prediction}}</h1>
+                {% if predictions  %}
+                <h1>Label    : {{finalPrediction}}</h1>
+                
                 {% endif %}
                 
         </div>  
